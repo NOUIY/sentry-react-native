@@ -6,14 +6,15 @@
     "appium": "^1.22.0",
     "appium-doctor": "^1.16.0",
     "react": "17.0.1",
-    "react-native": "0.64.2",
+    "react-native": "0.68.0",
     "react-native-gesture-handler": "^1.10.3",
-    "react-native-reanimated": "^1.13.0",
+    "react-native-reanimated": "^2.3.0",
     "react-native-safe-area-context": "^3.1.4",
     "react-native-screens": "^2.10.1",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
-    "wd": "^1.14.0"
+    "wd": "^1.14.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -39,7 +40,10 @@
     "start": "react-native start",
     "start:test": "react-native start --reset-cache --config ./metro.config.test.js",
     "test": "jest",
-    "test-prep": "sh ./scripts/prepareConfigsForTesting.sh"
+    "test-prep": "sh ./scripts/prepareConfigsForTesting.sh",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "snyk": true
 }
