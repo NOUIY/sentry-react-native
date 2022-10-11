@@ -13,7 +13,8 @@
     "react-native-screens": "^2.10.1",
     "react-redux": "^7.2.1",
     "redux": "^4.0.5",
-    "wd": "^1.14.0"
+    "wd": "^1.14.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -39,7 +40,10 @@
     "start": "react-native start",
     "start:test": "react-native start --reset-cache --config ./metro.config.test.js",
     "test": "jest",
-    "test-prep": "sh ./scripts/prepareConfigsForTesting.sh"
+    "test-prep": "sh ./scripts/prepareConfigsForTesting.sh",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "snyk": true
 }
